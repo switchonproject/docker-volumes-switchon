@@ -1,2 +1,3 @@
 /nbproject/private/
 *.bak
+/cids-distribution-switchon/cids-integration-base/import/switchon.sql
