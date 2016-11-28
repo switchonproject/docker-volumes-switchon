@@ -1,32 +1,13 @@
-cids-distribution-switchon-cids-integration-base:
-  image: cismet/cids-integration-base:postgres-9.6.1
-  ports:
-    - "5434:5432"
-  volumes:
-    - cids-distribution-switchon-cids-integration-base:/data
-    - ~/docker-volumes-switchon/cids-distribution-switchon/cids-integration-base/import/:/import/cids-integration-base/
-cids-distribution-switchon-cids-server:
-  image: cismet/cids-server
-  links:
-    - "cids-distribution-switchon-cids-integration-base:cids-integration-base"
-  ports:
-    - "9986:9986"
-  environment:
-    LOG4J_HOST: 172.17.0.1
-    CIDS_ACCOUNT_EXTENSION: SWITCH-ON
-  volumes:
-    - cids-distribution-switchon-cids-server:/data
-    - ~/docker-volumes-switchon/cids-distribution-switchon/cids-server/import/:/import/cids-server/
-cids-distribution-switchon-cids-server-rest-legacy:
-  image: cismet/cids-server-rest-legacy
-  links:
-    - "cids-distribution-switchon-cids-server:cids-server"
-  ports:
-    - "8890:8890"
-  environment:
-    LOG4J_HOST: 172.17.0.1
-    CIDS_ACCOUNT_EXTENSION: SWITCH-ON
-  volumes_from:
-    - cids-distribution-switchon-cids-server
-  volumes:
-    - ~/docker-volumes-switchon/cids-distribution-switchon/cids-server-rest-legacy/import/:/import/cids-server-rest-legacy/
+version: '2'
+services:
+    cids-integration-base:
+      image: cismet/cids-integration-base:postgres-9.6.1
+      container_name: cidsdistributionswitchon_cids-integration-base
+      ports:
+        - "5434:5432"
+      volumes:
+        - cids-integration-base:/data
+        - ~/docker-volumes-switchon/cids-distribution-switchon/cids-integration-base/import/:/import/cids-integration-base/
+volumes:
+  cids-integration-base:
+    driver: local

@@ -83,15 +83,5 @@
             <username>YOUR_USERNAME</username>
             <password>YOUR_CRYPTED_PASSWORD</password>
         </server>
-        <server>
-            <id>central</id>
-            <username>YOUR_USERNAME</username>
-            <password>YOUR_CRYPTED_PASSWORD</password>
-        </server>
-        <server>
-            <id>central-proxy</id>
-            <username>YOUR_USERNAME</username>
-            <password>YOUR_CRYPTED_PASSWORD</password>
-        </server>
     </servers>
 </settings>

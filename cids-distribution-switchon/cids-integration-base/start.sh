@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker start cids-distribution-switchon-cids-integration-base
+docker start cidsdistributionswitchon_cids-integration-base
