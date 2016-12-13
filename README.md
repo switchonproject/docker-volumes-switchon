@@ -1,2 +1,2 @@
-# docker-volumes
-custom switch-on volumes for [feeding docker-images](https://github.com/cismet/docker-images)
+# switchon-docker-volumes
+Custom SWITCH-ON volumes for feeding **generic** [cids-docker-images](https://github.com/cismet/cids-docker-images)
