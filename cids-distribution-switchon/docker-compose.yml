@@ -1,0 +1,41 @@
+version: '2'
+services:
+    cids-integration-base:
+      image: cismet/cids-integration-base:latest
+      container_name: cidsdistributionswitchon_cids-integration-base
+      ports:
+        - "5436:5432"
+      volumes:
+        - cids-integration-base:/cidsIntegrationBase/pg_data
+        - ~/switchon-docker-volumes/cids-distribution-switchon/cids-integration-base/import/:/import/cidsIntegrationBase/
+      command: [start, import]
+    cids-distribution-switchon:
+      image: switchon/cids-distribution-switchon:latest
+      container_name: cidsdistributionswitchon_cids-distribution-switchon
+      links:
+        - "cids-integration-base:cids-integration-base"
+      depends_on: 
+        - cids-integration-base
+      ports:
+        - "9986:9986"
+        - "8890:8890"
+        - "80:80"
+      environment:
+        - LOG4J_HOST=172.17.0.1
+        - CIDS_ACCOUNT_EXTENSION=Switchon
+        - PGPASSWORD=postgres
+        # Environment variables are no longer the recommended method for connecting to linked services. 
+        # Instead, you should use the link name (by default, the name of the linked service) as the hostname to connect to. 
+        # See the docker-compose.yml documentation for details.
+        # Environment variables will only be populated if you’re using the legacy version 1 Compose file format.
+        - CIDS_INTEGRATION_BASE_PORT_5432_TCP_ADDR=cids-integration-base
+        - CIDS_INTEGRATION_BASE_PORT_5432_TCP_PORT=5432
+      volumes:
+        - ~/switchon-docker-volumes/cids-distribution-switchon/cidsDistribution/server/:/cidsDistribution/server/
+        - ~/switchon-docker-volumes/cids-distribution-switchon/cidsDistribution/lib/localSwitchon/:/cidsDistribution/lib/localSwitchon/
+        - ~/switchon-docker-volumes/cids-distribution-switchon/cidsDistribution/client/:/cidsDistribution/client/
+volumes:
+  cids-integration-base:
+    driver: local
+  cids-distribution-switchon:
+    driver: local

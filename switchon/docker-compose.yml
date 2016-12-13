@@ -11,7 +11,7 @@ services:
       command: [start, import]
     cids-server:
       image: cismet/cids-server
-      container_name: switchon_cids-server
+      container_name: switchon_cids-server:latest
       links:
         - "cids-integration-base:cids-integration-base"
       depends_on: 
@@ -32,7 +32,7 @@ services:
         - cids-server:/cidsDistribution
         - ~/switchon-docker-volumes/switchon/cids-server/import/:/import/cids-server/
     cids-server-rest-legacy:
-      image: cismet/cids-server-rest-legacy
+      image: cismet/cids-server-rest-legacy:latest
       container_name: switchon_cids-cids-server-rest-legacy
       links:
         - "cids-server:cids-server"

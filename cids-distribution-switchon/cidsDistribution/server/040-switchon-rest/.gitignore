@@ -1,0 +1,5 @@
+SWITCHON-REST-SERVICE
+*.pid
+*.out
+*.txt
+*.html
