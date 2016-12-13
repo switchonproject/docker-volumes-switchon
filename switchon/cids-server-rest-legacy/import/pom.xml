@@ -5,7 +5,7 @@
     <parent>
         <groupId>de.cismet</groupId>
         <artifactId>global-parent</artifactId>
-        <version>2.0</version>
+        <version>3.0.1</version>
     </parent>
 
     <groupId>de.cismet.cids.custom.switchon</groupId>
@@ -37,11 +37,11 @@
                         </goals>
                     </execution>
                 </executions>
-		 						<configuration>
+                <configuration>
                     <vendor>cismet</vendor>
                     <homepage>http://www.cismet.de</homepage>
                     <codebase>http://data.water-switch-on.eu/sip-expert-gui/</codebase>
-                     <m2codebase>__MAVEN_LIB_DIR__</m2codebase>
+                    <m2codebase>__MAVEN_LIB_DIR__</m2codebase>
                     <accountExtension>__CIDS_ACCOUNT_EXTENSION__</accountExtension>
                     <outputDirectory>__DATA_DIR__</outputDirectory>
                     <dependencyConfiguration>

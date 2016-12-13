@@ -20,7 +20,7 @@ services:
         - "9986:9986"
       environment:
         - LOG4J_HOST=172.17.0.1
-        - CIDS_ACCOUNT_EXTENSION=CidsReference
+        - CIDS_ACCOUNT_EXTENSION=Switchon
         # Environment variables are no longer the recommended method for connecting to linked services. 
         # Instead, you should use the link name (by default, the name of the linked service) as the hostname to connect to. 
         # See the docker-compose.yml documentation for details.
@@ -41,7 +41,7 @@ services:
         - "8890:8890"
       environment:
         - LOG4J_HOST=172.17.0.1
-        - CIDS_ACCOUNT_EXTENSION=CidsReference
+        - CIDS_ACCOUNT_EXTENSION=Switchon
         - CIDS_SERVER_PORT_9986_TCP_ADDR=cids-server
         - CIDS_SERVER_PORT_9986_TCP_PORT=9986
       volumes_from:
