@@ -1,4 +1,4 @@
-*.log
-*.err
-cids-init/cids_init_script.sql
-dumps/switchon.sql
+**/*.log
+**/*.err
+**/*.backup
+**/*.sql
