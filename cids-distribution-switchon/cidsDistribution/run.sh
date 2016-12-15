@@ -18,3 +18,4 @@ docker run -it -p 9986:9986 -p 8890:8890 -p 80:80 \
 #    -v ~/git_work/cids-docker-images/cids-distribution/cidsDistribution/utils/:/cidsDistribution/utils/ \
 #    -v ~/switchon-docker-volumes/cids-distribution-switchon/cidsDistribution/gen/:/cidsDistribution/gen/ \
 #    -v ~/git_work/docker-images/cids-distribution/cidsDistribution/utils/:/cidsDistribution/utils/ \
+    #--link cidsdistributionswitchon_cids-integration-base:cids-integration-base \
