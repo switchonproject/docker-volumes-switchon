@@ -7,7 +7,7 @@ services:
         - "5436:5432"
       volumes:
         - cids-integration-base:/cidsIntegrationBase/pg_data
-        - ~/switchon-docker-volumes/cids-distribution-switchon/cids-integration-base/import/:/import/cidsIntegrationBase/
+        - ~/switchon-docker-volumes/cids-distribution-switchon/cidsIntegrationBase/import/:/import/cidsIntegrationBase/
       command: [start, import]
     cids-distribution-switchon:
       image: switchon/cids-distribution-switchon:latest
