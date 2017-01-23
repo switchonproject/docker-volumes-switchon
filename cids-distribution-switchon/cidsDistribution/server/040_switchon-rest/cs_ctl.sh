@@ -6,7 +6,7 @@ SERVICE=SWITCHON-REST-SERVICE
 START_OPTIONS=@runtime.properties
 
 # name of the starter JAR that defines the main class to run
-STARTER_JAR=cids-server-rest-legacy-1.0-SNAPSHOT-starter.jar
+STARTER_JAR=cids-server-rest-legacy-4.0-starter.jar
 
 XMS=128m
 XMX=512m

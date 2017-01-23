@@ -10,7 +10,7 @@
 
     <groupId>de.cismet.cids.custom.switchon</groupId>
     <artifactId>switchon-dist</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>4.0</version>
     <packaging>pom</packaging>
 
     <name>cids Custom Switch-On Distribution v3</name>
@@ -20,12 +20,12 @@
         <dependency>
             <groupId>de.cismet.cids.custom.switchon</groupId>
             <artifactId>cids-custom-switchon</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>4.0</version>
         </dependency>
         <dependency>
             <groupId>de.cismet.cids.custom.switchon</groupId>
             <artifactId>cids-custom-switchon-server</artifactId>
-            <version>2.0-SNAPSHOT</version>
+            <version>4.0</version>
         </dependency>
     </dependencies>
 
@@ -53,13 +53,13 @@
                         <dependencyEx>
                             <groupId>de.cismet.cids.custom.switchon</groupId>
                             <artifactId>cids-custom-switchon-server</artifactId>
-                            <version>2.0-SNAPSHOT</version>
+                            <version>4.0</version>
                             <generateJnlp>false</generateJnlp>
                             <additionalDependencies>
                                 <dependency>
                                     <groupId>de.cismet.commons</groupId>
                                     <artifactId>cids-utils</artifactId>
-                                    <version>2.0-SNAPSHOT</version>
+                                    <version>4.0</version>
                                 </dependency>
                             </additionalDependencies>
                             <starterConfiguration>
@@ -70,7 +70,7 @@
                             <groupId>de.cismet.cids.custom.switchon</groupId>
                             <artifactId>cids-custom-switchon</artifactId>
                             <generateJar>false</generateJar>
-                            <version>2.0-SNAPSHOT</version>
+                            <version>4.0</version>
                             <starterConfiguration>
                                 <title>SWITCH-ON SIP Expert GUI</title>
                                 <java>
