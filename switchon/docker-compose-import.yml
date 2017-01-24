@@ -8,7 +8,7 @@ services:
       volumes:
         - cids-integration-base:/cidsIntegrationBase/pg_data
         - ~/switchon-docker-volumes/switchon/cids-integration-base/import/:/import/cidsIntegrationBase/
-      command: [start]
+      command: [start, import]
     cids-server:
       image: cismet/cids-server:latest-snapshot
       container_name: switchon_cids-server

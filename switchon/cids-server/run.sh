@@ -12,4 +12,4 @@ docker run -d -p 9986:9986 \
     -e CIDS_SERVER_STARTER=cids-custom-switchon-server-4.0-starter.jar
     -v switchon_cids-server:/cidsDistribution \
     -v ~/switchon-docker-volumes/switchon/cids-server/import/:/import/cids-server/ \
-    cismet/cids-server:latest
+    cismet/cids-server:latest-snapshot
