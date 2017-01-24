@@ -1,7 +1,7 @@
 version: '2'
 services:
     cids-integration-base:
-      image: cismet/cids-integration-base:latest
+      image: cismet/cids-integration-base:postgres-9.6.1-2.0
       container_name: cidsdistributionswitchon_cids-integration-base
       ports:
         - "5436:5432"
@@ -10,7 +10,7 @@ services:
         - ~/switchon-docker-volumes/cids-distribution-switchon/cidsIntegrationBase/import/:/import/cidsIntegrationBase/
       command: [start, import]
     cids-distribution-switchon:
-      image: switchon/cids-distribution-switchon:latest
+      image: switchon/cids-distribution-switchon:4.0
       container_name: cidsdistributionswitchon_cids-distribution-switchon
       links:
         - "cids-integration-base:cids-integration-base"
