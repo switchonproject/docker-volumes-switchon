@@ -1,2 +1,3 @@
-# switchon-docker-volumes
-Custom SWITCH-ON volumes for feeding **generic** [cids-docker-images](https://github.com/cismet/cids-docker-images)
+## Docker Volumes for the SWITCH-ON Spatial Information Platform 
+
+Custom SWITCH-ON data volumes for feeding **generic** [Docker Images](https://github.com/switchonproject/switchon-docker-images) or the SWITCH-ON Spatial Information Platform.
