@@ -6,7 +6,7 @@ SERVICE=SWITCHON-REST-SERVICE
 START_OPTIONS=@runtime.properties
 
 # name of the starter JAR that defines the main class to run
-STARTER_JAR=>switchon-server-rest-starter.jar
+STARTER_JAR=switchon-server-rest-starter.jar
 
 XMS=128m
 XMX=512m
