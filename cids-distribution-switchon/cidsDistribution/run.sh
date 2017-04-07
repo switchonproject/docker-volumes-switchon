@@ -10,7 +10,7 @@ docker run -it -p 9986:9986 -p 8890:8890 -p 80:80 \
     -v ~/switchon-docker-volumes/cids-distribution-switchon/cidsDistribution/server/:/cidsDistribution/server/ \
     -v ~/switchon-docker-volumes/cids-distribution-switchon/cidsDistribution/lib/localSwitchon/:/cidsDistribution/lib/localSwitchon/ \
     -v ~/switchon-docker-volumes/cids-distribution-switchon/cidsDistribution/client/:/cidsDistribution/client/ \
-    switchon/cids-distribution-switchon:latest-snapshot
+    switchon/cids-distribution-switchon:5.0
     
 #    -v ~/git_work/cids-docker-images/cids-distribution/cidsDistribution/cids_ctl.sh:/cidsDistribution/cids_ctl.sh \
 #    -v ~/git_work/cids-docker-images/cids-distribution/import/container_ctl.sh:/container_ctl.sh \

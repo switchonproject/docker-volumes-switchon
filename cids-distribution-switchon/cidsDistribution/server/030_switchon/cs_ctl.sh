@@ -6,7 +6,7 @@ SERVICE=SWITCHON-SERVICE
 # START_OPTIONS=@runtime.properties
 
 # name of the starter JAR that defines the main class to run
-STARTER_JAR=cids-custom-switchon-server-4.0-starter.jar
+STARTER_JAR=switchon-server-starter.jar
 
 XMS=128m
 XMX=512m
