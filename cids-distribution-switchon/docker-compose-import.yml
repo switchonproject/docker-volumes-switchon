@@ -10,7 +10,7 @@ services:
         - ~/switchon-docker-volumes/cids-distribution-switchon/cidsIntegrationBase/import/:/import/cidsIntegrationBase/
       command: [start, import]
     cids-distribution-switchon:
-      image: switchon/cids-distribution-switchon:5.0
+      image: switchon/cids-distribution-switchon:latest-snapshot
       container_name: cidsdistributionswitchon_cids-distribution-switchon
       links:
         - "cids-integration-base:cids-integration-base"
