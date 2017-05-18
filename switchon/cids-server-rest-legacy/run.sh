@@ -10,4 +10,4 @@ docker run -d -p 8890:8890 \
     -e LOG4J_HOST=172.17.0.3 \
     --volumes-from="switchon_cids-server" \
     -v ~/switchon-docker-volumes/switchon/cids-server-rest-legacy/import/:/import/cids-server-rest-legacy/ \
-    cismet/cids-server-rest-legacy:latest-snapshot
+    cismet/cids-server-rest-legacy:4.0
