@@ -5,6 +5,7 @@ docker stop cidsdistributionswitchon_cids-distribution-switchon
 docker rm -v -f cidsdistributionswitchon_cids-distribution-switchon
 docker run -it -p 9986:9986 -p 8890:8890 -p 80:80 \
     --name cidsdistributionswitchon_cids-distribution-switchon \
+    --net cidsdistributionswitchon_default \
     --link cidsdistributionswitchon_cids-integration-base:cids-integration-base \
     -e PGPASSWORD=postgres \
     -v ~/switchon-docker-volumes/cids-distribution-switchon/cidsDistribution/server/:/cidsDistribution/server/ \
