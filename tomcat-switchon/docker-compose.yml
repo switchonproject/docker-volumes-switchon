@@ -5,10 +5,8 @@ services:
       container_name: tomcat_switchon
       ports:
         - "8888:8080"
-      links:
-        - "cids-integration-base:cids-integration-base"
-      depends_on: 
-        - cids-integration-base
+      external_links:
+        - "cidsdistributionswitchon_cids-integration-base:cids-integration-base"
       environment:
         # Environment variables are no longer the recommended method for connecting to linked services. 
         # Instead, you should use the link name (by default, the name of the linked service) as the hostname to connect to. 
@@ -19,9 +17,17 @@ services:
         #- CATALINA_OPTS=-server -Xmx16g -Xms8g -XX:SoftRefLRUPolicyMSPerMB=36000
         - CATALINA_OPTS=-server -Xmx4g -Xms2g -XX:SoftRefLRUPolicyMSPerMB=36000
       volumes:
-        - ~/switchon-docker-volumes/tomcat-switchon/webapps/:/import/webapps/
+        - ~/switchon-docker-volumes/tomcat-switchon/webapps/geoserver:/usr/local/tomcat/webapps/geoserver
+        - ~/switchon-docker-volumes/tomcat-switchon/webapps/geoserver:/usr/share/tomcat/webapps/geoserver
+        - /home/switchon/data/geoserver/:/home/switchon/data/geoserver/
+        - ~/switchon-docker-volumes/tomcat-switchon/webapps/geowebcache:/usr/local/tomcat/webapps/geowebcache
+        - /home/switchon/data/geowebcache:/home/switchon/data/geowebcache
       networks:
+        - default
         - cidsdistributionswitchon_default
-volumes:
-  tomcat-switchon:
-    driver: local
+networks:
+    cidsdistributionswitchon_default:
+        external: true
+volumes: 
+    tomcat-switchon:
+        driver: local
