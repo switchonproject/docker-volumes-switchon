@@ -1,0 +1,27 @@
+version: '2'
+services:
+    tomcat-switchon:
+      image: tomcat:8.0-jre8
+      container_name: tomcat_switchon
+      ports:
+        - "8888:8080"
+      links:
+        - "cids-integration-base:cids-integration-base"
+      depends_on: 
+        - cids-integration-base
+      environment:
+        # Environment variables are no longer the recommended method for connecting to linked services. 
+        # Instead, you should use the link name (by default, the name of the linked service) as the hostname to connect to. 
+        # See the docker-compose.yml documentation for details.
+        # Environment variables will only be populated if you’re using the legacy version 1 Compose file format.
+        - CIDS_INTEGRATION_BASE_PORT_5432_TCP_ADDR=cids-integration-base
+        - CIDS_INTEGRATION_BASE_PORT_5432_TCP_PORT=5432
+        #- CATALINA_OPTS=-server -Xmx16g -Xms8g -XX:SoftRefLRUPolicyMSPerMB=36000
+        - CATALINA_OPTS=-server -Xmx4g -Xms2g -XX:SoftRefLRUPolicyMSPerMB=36000
+      volumes:
+        - ~/switchon-docker-volumes/tomcat-switchon/webapps/:/import/webapps/
+      networks:
+        - cidsdistributionswitchon_default
+volumes:
+  tomcat-switchon:
+    driver: local
