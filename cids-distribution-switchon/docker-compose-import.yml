@@ -34,6 +34,9 @@ services:
         - ~/switchon-docker-volumes/cids-distribution-switchon/cidsDistribution/server/:/cidsDistribution/server/
         - ~/switchon-docker-volumes/cids-distribution-switchon/cidsDistribution/lib/localSwitchon/:/cidsDistribution/lib/localSwitchon/
         - ~/switchon-docker-volumes/cids-distribution-switchon/cidsDistribution/client/:/cidsDistribution/client/
+#        - ~/git_work/cids-docker-images/cids-distribution/cidsDistribution/cids_ctl.sh:/cidsDistribution/cids_ctl.sh
+#        - ~/git_work/cids-docker-images/cids-distribution/import/container_ctl.sh:/container_ctl.sh
+#        - ~/git_work/cids-docker-images/cids-distribution/cidsDistribution/utils/:/cidsDistribution/utils/
 volumes:
   cids-integration-base:
     driver: local
